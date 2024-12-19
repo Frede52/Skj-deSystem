@@ -81,9 +81,13 @@
             NavigationManager.NavigateTo("/login");
         }
 
+        Console.WriteLine(UserId);
+
         //Henter Subcontractor ud fra ID
 
         currentsubcontractor = await UserService.GetUserById(UserId) as Subcontractor;
+
+        Console.WriteLine(currentsubcontractor);
 
 
         // Henter liste af alle opgaver for den pågældene subcontractor:
